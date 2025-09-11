@@ -35,6 +35,7 @@ public class ImGui : ModuleRules
 			new string[] {
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiLibrary/Include"),
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImPlotLibrary/Public"),
+				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiFileDialogLibrary/Public"),
 				// ... add public include paths required here ...
 			}
 			);
@@ -45,6 +46,7 @@ public class ImGui : ModuleRules
 				"ImGui/Private",
 				"ThirdParty/ImGuiLibrary/Private",
 				"ThirdParty/ImPlotLibrary/Private",
+				"ThirdParty/ImGuiFileDialogLibrary/Private",
 				// ... add other private include paths required here ...
 			}
 			);
@@ -102,5 +104,8 @@ public class ImGui : ModuleRules
 
 		// Force ImPlot to export its methods in this module DLL so we can import them in our main project
 		PrivateDefinitions.Add("IMPLOT_API=DLLEXPORT");
+
+		PrivateDefinitions.Add("IGFD_API=DLLEXPORT");
+		PrivateDefinitions.Add("USE_STD_FILESYSTEM");
 	}
 }

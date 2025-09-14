@@ -36,6 +36,7 @@ public class ImGui : ModuleRules
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiLibrary/Include"),
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImPlotLibrary/Public"),
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiFileDialogLibrary/Public"),
+				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiZmoLibrary/Public"),
 				// ... add public include paths required here ...
 			}
 			);
@@ -47,6 +48,7 @@ public class ImGui : ModuleRules
 				"ThirdParty/ImGuiLibrary/Private",
 				"ThirdParty/ImPlotLibrary/Private",
 				"ThirdParty/ImGuiFileDialogLibrary/Private",
+				"ThirdParty/ImGuiZmoLibrary/Private",
 				// ... add other private include paths required here ...
 			}
 			);

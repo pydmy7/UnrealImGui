@@ -52,6 +52,11 @@ static FImGuiContextHandle ImGuiContextPtrHandle(ImGuiContextPtr);
 #include "implot_items.cpp"
 #include "implot_demo.cpp"
 
+#include "implot3d.cpp"
+#include "implot3d_items.cpp"
+#include "implot3d_meshes.cpp"
+#include "implot3d_demo.cpp"
+
 #include "ImGuiFileDialog.cpp"
 
 #include "ImGuizmo.cpp"

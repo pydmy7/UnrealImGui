@@ -10,6 +10,7 @@
 
 // Include ImPlot here so we can call `ImPlot::CreateContext`
 #include <implot.h>
+#include <implot3d.h>
 
 #include <GenericPlatform/GenericPlatformFile.h>
 #include <Misc/Paths.h>
@@ -87,6 +88,9 @@ FImGuiContextProxy::FImGuiContextProxy(const FString& InName, int32 InContextInd
 	// Create ImPlot context
 	ImPlot::CreateContext();
 
+	// Create ImPlot3D context
+	ImPlot3D::CreateContext();
+
 	// Set this context in ImGui for initialization (any allocations will be tracked in this context).
 	SetAsCurrent();
 
@@ -123,11 +127,14 @@ FImGuiContextProxy::~FImGuiContextProxy()
 		// Ensure frame has ended
 		EndFrame();
 
-		// Save context data and destroy.
-		ImGui::DestroyContext(Context);
-
 		// Destroy ImPlot context
 		ImPlot::DestroyContext();
+
+		// Destroy ImPlot3D context
+		ImPlot3D::DestroyContext();
+
+		// Save context data and destroy.
+		ImGui::DestroyContext(Context);
 	}
 }
 

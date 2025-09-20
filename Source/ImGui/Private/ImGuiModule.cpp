@@ -147,6 +147,10 @@ void FImGuiModule::StartupModule()
 	checkf(!ImGuiEditor, TEXT("Instance of the ImGui Editor already exists. Instance should be created only during module startup."));
 	ImGuiEditor = new FImGuiEditor();
 #endif
+
+    FImGuiModule::Get().GetProperties().SetInputEnabled(true);
+    FImGuiModule::Get().GetProperties().SetMouseInputShared(true);
+    FImGuiModule::Get().GetProperties().SetKeyboardInputShared(true);
 }
 
 void FImGuiModule::ShutdownModule()

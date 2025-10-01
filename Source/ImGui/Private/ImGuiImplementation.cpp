@@ -46,8 +46,8 @@ static FImGuiContextHandle ImGuiContextPtrHandle(ImGuiContextPtr);
 #include "imgui_demo.cpp"
 #include "imgui_draw.cpp"
 #include "imgui_widgets.cpp"
-
 #include "imgui_tables.cpp"
+
 #include "implot.cpp"
 #include "implot_items.cpp"
 #include "implot_demo.cpp"
@@ -60,6 +60,8 @@ static FImGuiContextHandle ImGuiContextPtrHandle(ImGuiContextPtr);
 #include "ImGuiFileDialog.cpp"
 
 #include "ImGuizmo.cpp"
+
+#include "ImViewGuizmo.cpp"
 
 #if PLATFORM_WINDOWS
 #include <Windows/HideWindowsPlatformTypes.h>

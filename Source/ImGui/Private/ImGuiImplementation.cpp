@@ -61,8 +61,6 @@ static FImGuiContextHandle ImGuiContextPtrHandle(ImGuiContextPtr);
 
 #include "ImGuizmo.cpp"
 
-#include "ImViewGuizmo.cpp"
-
 #if PLATFORM_WINDOWS
 #include <Windows/HideWindowsPlatformTypes.h>
 #endif // PLATFORM_WINDOWS

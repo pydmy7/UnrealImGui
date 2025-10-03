@@ -106,10 +106,7 @@ namespace ImOGuizmo {
 
 		inline bool checkInsideCircle(const ImVec2 center, const float radius, const ImVec2 point)
 		{
-		    double a = (point.x - center.x) * (point.x - center.x) + (point.y - center.y) * (point.y - center.y);
-		    double b = radius * radius;
-		    return a <= b;
-			// return (point.x - center.x) * (point.x - center.x) + (point.y - center.y) * (point.y - center.y) <= radius * radius;
+			return (point.x - center.x) * (point.x - center.x) + (point.y - center.y) * (point.y - center.y) <= radius * radius;
 		}
 
 		inline void drawPositiveLine(const ImVec2 center, const ImVec2 axis, const ImU32 color, const float radius, const float thickness, const char* text, const bool selected) {

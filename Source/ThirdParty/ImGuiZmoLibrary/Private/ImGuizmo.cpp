@@ -2663,7 +2663,8 @@ namespace IMGUIZMO_NAMESPACE
       vec_t camSpacePosition;
       camSpacePosition.TransformPoint(makeVect(0.f, 0.f, 0.f), gContext.mMVP);
       // if (!gContext.mIsOrthographic && camSpacePosition.z < 0.001f && !gContext.mbUsing)
-	  if (!gContext.mIsOrthographic && camSpacePosition.z > 10.0f && !gContext.mbUsing)
+	  // if (!gContext.mIsOrthographic && camSpacePosition.z > 10.0f && !gContext.mbUsing)
+	  if (!gContext.mIsOrthographic && camSpacePosition.z > gContext.mProjectionMat.v.position[2] && !gContext.mbUsing)
       {
          return false;
       }
